@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Prompt:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.font-families{
+    font-family: 'Great Vibes', cursive;
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Cormorant Upright', serif;
+    font-family: 'El Messiri', sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    text-rendering: optimizeLegibility;
+    font-family: 'Prompt', sans-serif;
+    font-size: 100%;
+    font-weight: 300;
+    color: #3F5553;
+}
+
+
+.logo-img{
+    height: 70px;
+}
+.slider-h2{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    font-family: 'El Messiri', sans-serif;
+    text-shadow: 0 4px 4px rgba(0,0,0,.22);
+    font-weight:400;
+}
+.slider-h3{
+   font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+}
+
+
+header{
+    position: relative;
+}
+header .item .cover{
+   background:#0000006e;
+}
+#special-day{
+    background-image: url(../images/bkg-img4.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+}
+.special-cursive{
+    color: #8ec400;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    font-weight: 500;
+}
+.memorable{
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    line-height: 1.6;
+    font-weight: 700;
+    font-family: 'El Messiri', sans-serif;
+
+}
+.normal-cursive{
+    color: #8ec400;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+}
+.heading-section{
+    font-weight: 600;
+    text-align: center;
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+.introducing{
+    font-family: 'El Messiri', sans-serif;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.covid-p{
+    line-height: 29px;
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+}
+.wemissedu{
+    background: #f4f2ed;
+}
+.priority{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 400;
+    font-family: 'El Messiri', sans-serif;
+    text-transform: capitalize;
+}
+.menu-items{
+    padding: 4rem;
+}
+.menu-heading{
+    font-family: 'El Messiri', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 3rem;
+    color: #000;
+    text-shadow: 0 4px 4px rgba(0,0,0,.22);
+}
+.small-cursive {
+    color: #8ec400;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    font-weight: 500;
+}
+.divider-svg {
+    display: inline-block;
+}
+.divider.style-2.center {
+    margin: 0 auto 0 auto;
+    position: relative;
+}
+.divider.style-2 {
+    width: 240px;
+    text-align: center;
+}
+.divider .hr-double.right:after {
+    position: absolute;
+    content: "";
+    width: 93px;
+    height: 1px;
+    top: 18px;
+    right: 0;
+    background-color: #8ec400;
+}
+
+.divider .hr-double.left:before {
+    position: absolute;
+    content: "";
+    width: 76px;
+    height: 1px;
+    left: 17px;
+    top: 14px;
+    background-color: #8ec400;
+}
+.divider .hr-double.right:before {
+    background-color: #8ec400;
+    position: absolute;
+    content: "";
+    width: 76px;
+    height: 1px;
+    right: 17px;
+    top: 14px;
+}
+.welcome-to{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #8ec400;
+}
+.divider .divider-svg {
+    width: 23px;
+    height: 30px;
+    margin-left: 4px;
+
+}
+.divider-svg svg{
+    fill:rgb(155, 197, 59);
+}
+.divider .hr-double.left:after {
+    position: absolute;
+    content: "";
+    width: 93px;
+    height: 1px;
+    top: 18px;
+    left: 0;
+    background-color: #8ec400;
+}
+.modal.left .modal-dialog {
+    position:fixed;
+    right: 0;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+.modal.right.fade .modal-dialog {
+    left: -320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+    right: 0;
+}
+.view-button {
+    display: inline-block;
+    padding: 0.6em 0.88em;
+    background: linear-gradient(to right, #e66465 50%, #fff 50%);
+    background-size: 200% 100.5%;
+    background-position: right bottom;
+    color: #020202;
+    border: none;
+    border-left: 0.2em solid #e66465;
+    border-color: none;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s ease-out;
+}
+.view-button:hover {
+    background-position: left bottom;
+    color: white;
+}
+.about-us{
+    padding: 4rem;
+}
+.welcome-main{
+    font-family: 'El Messiri', sans-serif;
+    text-shadow: 0 4px 4px rgba(0,0,0,.22);
+    color: #000;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.coco-btn {
+    border: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #333;
+    padding: 13px 30px;
+    margin: 0 auto;
+    box-shadow: none;
+    letter-spacing: 0.5px;
+}
+
+.coco-btn span {
+    position: relative; 
+    z-index: 1;
+}
+
+.coco-btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: #8ec400;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.coco-btn:hover:after {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+.coco-btn:hover span{
+    color: #fff;
+    text-decoration: none !important;
+}
+.coco-btn:hover {
+    color: #fff;
+    text-decoration: none !important;
+}
+.about-us p{
+    text-align: justify;
+    max-width: 90%;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width:760px) {
+    .welcome-to {
+    font-size: 1.15rem;
+    font-weight: 300;
+ 
+    font-family: 'Prompt', sans-serif;
+}
+.menu-heading {
+  
+    font-size: 1.75rem;
+   
+}
+.slider-h2 {
+    font-size: 2rem;
+    
+}
+.small-cursive {
+    color: #8ec400;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 300;
+}
+header .item .cover .header-content {
+   
+    padding: 30px 0;
+    
+}
+.welcome-main {
+
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+}
+.coco-btn {
+
+    padding: 9px 20px;
+
+    letter-spacing: 0;
+    font-size: 0.9rem;
+}
+.memorable {
+    font-size: 1.75rem;
+
+    line-height: 1.4;
+
+}
+.special-cursive {
+
+    font-size: 3rem;
+ 
+}
+.covid-p {
+    line-height: 24px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #555;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.introducing {
+
+    margin-bottom: 1rem;
+}
+.about-us p {
+    text-align: center;
+    max-width: 100%;
+    line-height: 22px;
+}
+.heading-section {
+    font-weight: 600;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+    font-family: 'Prompt', sans-serif;
+}
+.normal-cursive {
+    color: #8ec400;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.wemissedu{
+    padding:0 !important;
+}
+}

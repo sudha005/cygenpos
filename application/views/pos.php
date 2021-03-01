@@ -109,7 +109,7 @@ border:1px solid #000!important;
 </head>
 
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body id="" onload="launchFullscreen()">
+<body id="" >
 
 
   <?php $CI =& get_instance(); ?>
@@ -3791,6 +3791,7 @@ $('body').on('click','.orderClk',function (e) {
 
   $('body').on('click','.allTbl',function (e) {
   var currentid_tbl=$(this).attr('table_id');
+  alert(currentid_tbl);
   var tbldiv="tbldiv"+currentid_tbl;
   $(".table-number").removeClass('active');
   $("#"+tbldiv).addClass('active');
@@ -3804,7 +3805,7 @@ $('body').on('click','.orderClk',function (e) {
      var order_number=$("#order_number").val(); 
   }
 	var data = new Array(2);
-	//alert(order_number);
+	alert(order_number);
 		data= new FormData($('#pos-form')[0]);//form name
 	swal({ title: "Are you sure?",icon: "warning",buttons: true,dangerMode: true,}).then((sure) => {
 			  if(sure) {//confirmation start
@@ -3814,7 +3815,11 @@ $('body').on('click','.orderClk',function (e) {
       //alert(result);//return;
       console.log(result);
       var sales_id=result;
-      var print_done =window.open(base_url+"pos/print_kot_pos/"+sales_id, "_blank", "scrollbars=1,resizable=1,height=300,width=450");
+     // var print_done =window.open(base_url+"pos/print_kot_pos/"+sales_id, "_blank", "scrollbars=1,resizable=1,height=300,width=450");
+      $.post("<?php echo $base_url; ?>pos/printer_kot_pos/"+sales_id,{productId:ProductId},function(result_pos){
+        //alert();
+        console.log(result_pos);
+      });
       $.post("<?php echo $base_url; ?>pos/cart_detail",{productId:ProductId},function(result_data_response){
             $("#pos-form-tbody").html(result_data_response);
             $.post("<?php echo $base_url; ?>pos/cart_summery",{productId:ProductId},function(result_data_response_summery){

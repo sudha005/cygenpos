@@ -37,12 +37,12 @@ class Stripe extends MY_Controller {
          	$customer_id=$this->session->userdata('user_login_session_id');
         require_once('application/libraries/connect-php-sdk-master/vendor/autoload.php');
       
-$access_token = 'EAAAEJ3TjlDW-BjuoAz6sNEcLzaE_-3LyH6tIFlrsno1jqEjzt2hRbSDKJgaLX5w';
+$access_token = 'EAAAEJbcvbcvbcvbcvb3TjlDW-BjuoAz6sNEcLzaE_-3LyH6tIFlrsno1jqEjzt2hRbSDKJgaLX5w';
 # setup authorization
 \SquareConnect\Configuration::getDefaultConfiguration()->setAccessToken($access_token);
 # create an instance of the Transaction API class
 $transactions_api = new \SquareConnect\Api\TransactionsApi();
-$location_id ='LY1QS1HA57RH1';
+$location_id ='LY1QS1HAbvcbcvbcvbcvbcv57RH1';
 $nonce = $_POST['nonce'];
 
 $request_body = array (

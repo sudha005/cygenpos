@@ -1,5 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+require_once APPPATH . 'third_party/autoload.php';
+use Mike42\Escpos\Printer;
+use Mike42\Escpos\PrintConnectors\WindowsPrintConnector;
+use Mike42\Escpos\PrintConnectors\NetworkPrintConnector;
 class Pos extends MY_Controller {
 	public function __construct(){
 		parent::__construct();
@@ -2036,6 +2040,375 @@ public function print_last_invoice_pos(){
 		$data=array_merge($data,array('sales_id'=>$sales_id));
 		$this->load->view('sal-invoice-pos',$data);
 } 
+
+//pos print
+// FOR KOT POS
+public function printer_kot_pos(){
+	$sales_id=1;
+	// echo   "update db_sales set order_view=0  where order_view=1 AND id='$sales_id'";
+	//   $sql23 =$this->db->query("update db_sales set order_view=0  where order_view=1 AND id='$sales_id'");
+	//   self::fun2($sales_id);
+	  self::posprint_fun1($sales_id);
+	  self::posprint_fun2($sales_id);
+	}
+	
+ public function posprint_fun1($sales_id)	
+ {
+	 
+
+	$kitchen_kot=array();
+	$coff_kot=array();
+	// echo "select cat_id from db_salesitems where 'sales_id'=$sales_id";
+	$query_cat=$this->db->query("select cat_id from db_salesitems where sales_id=$sales_id ");
+	$row=$query_cat->result_array();
+	foreach($row  as $rowitem){
+	   
+		$catid=$rowitem['cat_id'];
+		$kottype=getSingleColumnName($catid,'id','kot_type','db_category');
+		if($kottype==1){
+			$kitchen_kot[]=$catid;
+		}
+	}
+
+	if(count($kitchen_kot) > 0){
+
+
+	try {
+		// Enter the share name for your USB printer here
+  // $connector = null;
+  //$connector = new NetworkPrintConnector("192.168.0.104", 1700);
+  $connector = new WindowsPrintConnector("cygen-printer");
+   //$connector = new NetworkPrintConnector("cygen-printer");
+   /* Print a "Hello world" receipt" */
+   //
+ 
+		//flush(); //this sends the output to the client. You may also need ob_flush();
+		//sleep(1); //wait 10 seconds 
+		//$data=array_merge($data,array('kot_cat'=>$kitchen_kot));
+		//$data=array_merge($data,array('sales_id'=>$sales_id));
+	//	$this->load->view('kot-invoice-pos',$data);
+	$CAID=implode(",",$kitchen_kot);
+	
+		   
+	$CI =& get_instance();
+
+$q1=$this->db->query("select * from db_company where id=1 and status=1");
+$res1=$q1->row();
+$company_logo=$res1->company_logo;
+$company_name		=$res1->company_name;
+$company_mobile		=$res1->mobile;
+$company_phone		=$res1->phone;
+$company_email		=$res1->email;
+$company_country	=$res1->country;
+$company_state		=$res1->state;
+$company_city		=$res1->city;
+$company_address	=$res1->address;
+$company_postcode	=$res1->postcode;
+$company_gst_no		=$res1->gst_no;//Goods and Service Tax Number (issued by govt.)
+$company_vat_number		=$res1->vat_no;//Goods and Service Tax Number (issued by govt.)
+$website            =$res1->website;
+
+$q3=$this->db->query("SELECT a.customer_name,a.mobile,a.phone,a.gstin,a.tax_number,a.email,
+				   a.opening_balance,a.country_id,a.state_id,
+				   a.postcode,a.address,b.sales_date,b.created_time,b.reference_no,
+				   b.sales_code,b.sales_note,
+				   coalesce(b.grand_total,0) as grand_total,
+				   coalesce(b.subtotal,0) as subtotal,
+				   coalesce(b.paid_amount,0) as paid_amount,
+				   coalesce(b.other_charges_input,0) as other_charges_input,
+				   other_charges_tax_id,
+				   coalesce(b.other_charges_amt,0) as other_charges_amt,
+				   discount_to_all_input,
+				   b.discount_to_all_type,
+				   coalesce(b.tot_discount_to_all_amt,0) as tot_discount_to_all_amt,
+				   coalesce(b.round_off,0) as round_off,
+				   b.payment_status
+
+				   FROM db_customers a,
+				   db_sales b 
+				   WHERE 
+				   a.`id`=b.`customer_id` AND 
+				   b.`id`='$sales_id'  ");
+				   
+				 //  echo $this->db->last_query(); die;
+				   /*GROUP BY 
+				   b.`customer_code`*/
+
+$res3=$q3->row();
+$customer_name=$res3->customer_name;
+$customer_mobile=$res3->mobile;
+$customer_phone=$res3->phone;
+$customer_email=$res3->email;
+$customer_country=$res3->country_id;
+$customer_state=$res3->state_id;
+$customer_address=$res3->address;
+$customer_postcode=$res3->postcode;
+$customer_gst_no=$res3->gstin;
+$customer_tax_number=$res3->tax_number;
+$customer_opening_balance=$res3->opening_balance;
+$sales_date=show_date($res3->sales_date);
+$reference_no=$res3->reference_no;
+$created_time=show_time($res3->created_time);
+$sales_code=$res3->sales_code;
+$sales_note=$res3->sales_note;
+
+
+$subtotal=$res3->subtotal;
+$grand_total=$res3->grand_total;
+$other_charges_input=$res3->other_charges_input;
+$other_charges_tax_id=$res3->other_charges_tax_id;
+$other_charges_amt=$res3->other_charges_amt;
+$paid_amount=$res3->paid_amount;
+$discount_to_all_input=$res3->discount_to_all_input;
+$discount_to_all_type=$res3->discount_to_all_type;
+//$discount_to_all_type = ($discount_to_all_type=='in_percentage') ? '%' : 'Fixed';
+$tot_discount_to_all_amt=$res3->tot_discount_to_all_amt;
+$round_off=$res3->round_off;
+$payment_status=$res3->payment_status;
+
+if($discount_to_all_input>0){
+$str="($discount_to_all_input%)";
+}else{
+$str="(Fixed)";
+}
+
+if(!empty($customer_country)){
+$customer_country = $this->db->query("select country from db_country where id='$customer_country'")->row()->country;  
+}
+if(!empty($customer_state)){
+$customer_state = $this->db->query("select state from db_states where id='$customer_state'")->row()->state;  
+}
+
+
+
+
+
+
+   $printer = new Printer($connector);
+   $printer->setJustification(Printer::JUSTIFY_CENTER);
+   $printer->selectPrintMode(Printer::MODE_DOUBLE_WIDTH);
+   $printer->selectPrintMode(Printer::MODE_EMPHASIZED);
+   $printer -> text("$company_name"."\n");
+   $printer->selectPrintMode();
+   $printer -> text($company_address."\n");
+   $printer -> text($company_city."\n");
+   $printer -> text($company_gst_no);
+   $printer -> text("ABN Number:".$company_vat_number."\n");
+   $printer -> text("Phone:".$company_mobile."\n");
+   $printer->feed(1);
+   $printer->selectPrintMode(Printer::MODE_EMPHASIZED);
+   $printer -> text("KOT Number    ".$sales_code."\n");
+   
+   $texttoprint2 = sprintf('%-4.30s %-20.30s %-3.5s',"#","Description","Qty"); 
+   $printer->text($texttoprint2."\n");
+   $printer->selectPrintMode();
+   $i=0;
+   $tot_qty=0;
+   $subtotal=0;
+   $tax_amt=0;
+ //  $CAID=implode(",",$kot_cat);
+   $q2=$this->db->query("select b.item_name,a.sales_qty,a.unit_total_cost,a.price_per_unit,a.tax_amt,c.tax,a.total_cost from db_salesitems a,db_items b,db_tax c where c.id=a.tax_id and b.id=a.item_id and a.sales_id='$sales_id' AND a.cat_id IN($CAID)");
+   foreach ($q2->result() as $res2) {
+	  $item_name = substr($res2->item_name,0,18).'...';
+	  $m=++$i;
+	  $sales_qty = $res2->sales_qty;
+	//  $texttoprint .= sprintf('%s %s %f', $m,$item_name,$sales_qty); // very basic start: A string and a float
+		$texttoprint = sprintf('%-4.30s %-22.30s %3.2f',$m,$item_name,$sales_qty); 
+	//  $printer->text("{$m} {$item_name} -{$sales_qty} \n");
+	$printer->text("{$texttoprint} \n");
+   }	  
+	
+   $printer->feed(1);
+ $printer -> setUnderline(0); // Reset
+ $printer->  text("\n");
+$printer->  feed();
+$printer->  feed();
+$printer -> cut();
+/* Close printer */
+ $printer -> close();
+} 
+
+catch (Exception $e) {
+   echo "Couldn't print to this printer: " . $e -> getMessage() . "\n";
+}
+}
+ }	
+	
+ public function posprint_fun2($sales_id)	
+ {
+	 
+
+	$kitchen_kot=array();
+	$coff_kot=array();
+	// echo "select cat_id from db_salesitems where 'sales_id'=$sales_id";
+	$query_cat=$this->db->query("select cat_id from db_salesitems where sales_id=$sales_id ");
+	$row=$query_cat->result_array();
+	foreach($row  as $rowitem){
+	   
+		$catid=$rowitem['cat_id'];
+		$kottype=getSingleColumnName($catid,'id','kot_type','db_category');
+		if($kottype==2){
+			$coff_kot[]=$catid;  
+		}
+	}
+
+	if(count($coff_kot) > 0){
+	try {
+		// Enter the share name for your USB printer here
+		  // $connector = null;
+	   $connector = new WindowsPrintConnector("cygen-printer");
+		   /* Print a "Hello world" receipt" */
+		//flush(); //this sends the output to the client. You may also need ob_flush();
+		//sleep(1); //wait 10 seconds 
+		//$data=array_merge($data,array('kot_cat'=>$kitchen_kot));
+		//$data=array_merge($data,array('sales_id'=>$sales_id));
+		//	$this->load->view('kot-invoice-pos',$data);
+	$CAID=implode(",",$coff_kot);
+	
+		   
+	$CI =& get_instance();
+
+$q1=$this->db->query("select * from db_company where id=1 and status=1");
+$res1=$q1->row();
+$company_logo=$res1->company_logo;
+$company_name		=$res1->company_name;
+$company_mobile		=$res1->mobile;
+$company_phone		=$res1->phone;
+$company_email		=$res1->email;
+$company_country	=$res1->country;
+$company_state		=$res1->state;
+$company_city		=$res1->city;
+$company_address	=$res1->address;
+$company_postcode	=$res1->postcode;
+$company_gst_no		=$res1->gst_no;//Goods and Service Tax Number (issued by govt.)
+$company_vat_number		=$res1->vat_no;//Goods and Service Tax Number (issued by govt.)
+$website            =$res1->website;
+
+$q3=$this->db->query("SELECT a.customer_name,a.mobile,a.phone,a.gstin,a.tax_number,a.email,
+				   a.opening_balance,a.country_id,a.state_id,
+				   a.postcode,a.address,b.sales_date,b.created_time,b.reference_no,
+				   b.sales_code,b.sales_note,
+				   coalesce(b.grand_total,0) as grand_total,
+				   coalesce(b.subtotal,0) as subtotal,
+				   coalesce(b.paid_amount,0) as paid_amount,
+				   coalesce(b.other_charges_input,0) as other_charges_input,
+				   other_charges_tax_id,
+				   coalesce(b.other_charges_amt,0) as other_charges_amt,
+				   discount_to_all_input,
+				   b.discount_to_all_type,
+				   coalesce(b.tot_discount_to_all_amt,0) as tot_discount_to_all_amt,
+				   coalesce(b.round_off,0) as round_off,
+				   b.payment_status
+
+				   FROM db_customers a,
+				   db_sales b 
+				   WHERE 
+				   a.`id`=b.`customer_id` AND 
+				   b.`id`='$sales_id'  ");
+				   
+				 //  echo $this->db->last_query(); die;
+				   /*GROUP BY 
+				   b.`customer_code`*/
+
+$res3=$q3->row();
+$customer_name=$res3->customer_name;
+$customer_mobile=$res3->mobile;
+$customer_phone=$res3->phone;
+$customer_email=$res3->email;
+$customer_country=$res3->country_id;
+$customer_state=$res3->state_id;
+$customer_address=$res3->address;
+$customer_postcode=$res3->postcode;
+$customer_gst_no=$res3->gstin;
+$customer_tax_number=$res3->tax_number;
+$customer_opening_balance=$res3->opening_balance;
+$sales_date=show_date($res3->sales_date);
+$reference_no=$res3->reference_no;
+$created_time=show_time($res3->created_time);
+$sales_code=$res3->sales_code;
+$sales_note=$res3->sales_note;
+
+
+$subtotal=$res3->subtotal;
+$grand_total=$res3->grand_total;
+$other_charges_input=$res3->other_charges_input;
+$other_charges_tax_id=$res3->other_charges_tax_id;
+$other_charges_amt=$res3->other_charges_amt;
+$paid_amount=$res3->paid_amount;
+$discount_to_all_input=$res3->discount_to_all_input;
+$discount_to_all_type=$res3->discount_to_all_type;
+//$discount_to_all_type = ($discount_to_all_type=='in_percentage') ? '%' : 'Fixed';
+$tot_discount_to_all_amt=$res3->tot_discount_to_all_amt;
+$round_off=$res3->round_off;
+$payment_status=$res3->payment_status;
+
+if($discount_to_all_input>0){
+$str="($discount_to_all_input%)";
+}else{
+$str="(Fixed)";
+}
+
+if(!empty($customer_country)){
+$customer_country = $this->db->query("select country from db_country where id='$customer_country'")->row()->country;  
+}
+if(!empty($customer_state)){
+$customer_state = $this->db->query("select state from db_states where id='$customer_state'")->row()->state;  
+}
+
+
+
+
+
+
+   $printer = new Printer($connector);
+   $printer->setJustification(Printer::JUSTIFY_CENTER);
+   $printer->selectPrintMode(Printer::MODE_DOUBLE_WIDTH);
+   $printer->selectPrintMode(Printer::MODE_EMPHASIZED);
+   $printer -> text("$company_name"."\n");
+   $printer->selectPrintMode();
+   $printer -> text($company_address."\n");
+   $printer -> text($company_city."\n");
+   $printer -> text($company_gst_no);
+   $printer -> text("ABN Number:".$company_vat_number."\n");
+   $printer -> text("Phone:".$company_mobile."\n");
+   $printer->feed(1);
+   $printer->selectPrintMode(Printer::MODE_EMPHASIZED);
+   $printer -> text("KOT Number    ".$sales_code."\n");
+   
+   $texttoprint2 = sprintf('%-4.30s %-20.30s %-3.5s',"#","Description","Qty"); 
+   $printer->text($texttoprint2."\n");
+   $printer->selectPrintMode();
+   $i=0;
+   $tot_qty=0;
+   $subtotal=0;
+   $tax_amt=0;
+ //  $CAID=implode(",",$kot_cat);
+   $q2=$this->db->query("select b.item_name,a.sales_qty,a.unit_total_cost,a.price_per_unit,a.tax_amt,c.tax,a.total_cost from db_salesitems a,db_items b,db_tax c where c.id=a.tax_id and b.id=a.item_id and a.sales_id='$sales_id' AND a.cat_id IN($CAID)");
+   foreach ($q2->result() as $res2) {
+	  $item_name = substr($res2->item_name,0,18).'...';
+	  $m=++$i;
+	  $sales_qty = $res2->sales_qty;
+	//  $texttoprint .= sprintf('%s %s %f', $m,$item_name,$sales_qty); // very basic start: A string and a float
+		$texttoprint = sprintf('%-4.30s %-22.30s %3.2f',$m,$item_name,$sales_qty); 
+	//  $printer->text("{$m} {$item_name} -{$sales_qty} \n");
+	$printer->text("{$texttoprint} \n");
+   }	  
+	
+   $printer->feed(1);
+ $printer -> setUnderline(0); // Reset
+ $printer->  text("\n");
+$printer->  feed();
+$printer->  feed();
+$printer -> cut();
+/* Close printer */
+ $printer -> close();
+} 
+
+catch (Exception $e) {
+   echo "Couldn't print to this printer: " . $e -> getMessage() . "\n";
+}
+}
+ }	
  
     
 }

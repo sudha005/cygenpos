@@ -1,10 +1,8 @@
 // Set the application ID
-var applicationId = "sq0idp-I3qbeFY4sFOEv5Oeibcw8w";
+var applicationId = "sq0idvghfghfghcbcvbcvbcvbcvbp-I3qbeFY4sFOEv5Oeibcw8w";
 
 // Set the location ID
-var locationId = "LY1QS1HA57RH1";
-
-
+var locationId = "LY1QS1HbvbcvhghfghbA57RH1";
 function buildForm(form) {
   if (SqPaymentForm.isSupportedBrowser()) {
     form.build();

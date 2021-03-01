@@ -1,0 +1,126 @@
+Latte REG,CLASSIC,KG01,KG01,1,5,spice beam,5,1/11/2019,3.50,G,0,Inclusive,3.50,1000,111111
+Latte LARGE,CLASSIC,KG02,KG02,1,5,spice beam,5,1/11/2019,4.00,G,0,Inclusive,4.00,1000,111112
+Flat White REG,CLASSIC,KG04,KG04,1,5,spice beam,5,1/11/2019,3.50,G,0,Inclusive,3.50,1000,111113
+Flat White LARGE,CLASSIC,KG03,KG03,1,5,spice beam,5,1/11/2019,4.00,G,0,Inclusive,4.00,1000,111114
+Cappuccino REG,CLASSIC,DF34,DF34,1,5,spice beam,5,1/11/2019,3.50,G,0,Inclusive,3.50,1000,111115
+Cappuccino LARGE,CLASSIC,DF35,DF35,1,5,spice beam,5,1/12/2019,4.00,G,0,Inclusive,4.00,1000,111116
+Short Black REG,EXPRESSO,DF36,DF36,1,5,spice beam,5,1/13/2019,3.00,G,0,Inclusive,3.00,1000,111117
+Piccolo,EXPRESSO,DF37,DF37,1,5,spice beam,5,1/14/2019,3.00,G,0,Inclusive,3.00,1000,111118
+Macchiato,EXPRESSO,DF01,DF01,1,5,spice beam,5,1/15/2019,3.00,G,0,Inclusive,3.00,1000,111119
+Chai REG,SPECIALTY COFFEE,DF02,DF02,1,5,spice beam,5,1/16/2019,4.50,G,0,Inclusive,4.50,1000,111120
+Chai LARGE,SPECIALTY COFFEE,DF46,DF46,1,5,spice beam,5,1/17/2019,5.50,G,0,Inclusive,5.50,1000,111121
+Matcha REG,SPECIALTY COFFEE,DF03,DF03,1,5,spice beam,5,1/18/2019,4.50,G,0,Inclusive,4.50,1000,111122
+Match LARGE,SPECIALTY COFFEE,DF04,DF04,1,5,spice beam,5,1/19/2019,5.50,G,0,Inclusive,5.50,1000,111123
+Turmeric REG,SPECIALTY COFFEE,DF47,DF47,1,5,spice beam,5,1/20/2019,4.50,G,0,Inclusive,4.50,1000,111124
+Turmeric LARGE,SPECIALTY COFFEE,DF05,DF05,1,5,spice beam,5,1/21/2019,5.50,G,0,Inclusive,5.50,1000,111125
+Red Velvet REG,SPECIALTY COFFEE,DF06,DF06,1,5,spice beam,5,1/22/2019,4.50,G,0,Inclusive,4.50,1000,111126
+Red Velvet LARGE,SPECIALTY COFFEE,DF26,DF26,1,5,spice beam,5,1/23/2019,5.50,G,0,Inclusive,5.50,1000,111127
+Mocha REG,COUVERTURE CHOCOLATE,DF07,DF07,1,5,spice beam,5,1/24/2019,5.00,G,0,Inclusive,5.00,1000,111128
+Mocha LARGE,COUVERTURE CHOCOLATE,DF08,DF08,1,5,spice beam,5,1/25/2019,5.50,G,0,Inclusive,5.50,1000,111129
+Hot Chocolate REG,COUVERTURE CHOCOLATE,DF44,DF44,1,5,spice beam,5,1/26/2019,4.50,G,0,Inclusive,4.50,1000,111130
+Hot Chocolate LARGE,COUVERTURE CHOCOLATE,DF45,DF45,1,5,spice beam,5,1/27/2019,5.50,G,0,Inclusive,5.50,1000,111131
+Macadamia,COUVERTURE CHOCOLATE,DF09,DF09,1,5,spice beam,5,1/28/2019,0.50,G,0,Inclusive,0.50,1000,111132
+Soy,COUVERTURE CHOCOLATE,DF10,DF10,1,5,spice beam,5,1/29/2019,0.50,G,0,Inclusive,0.50,1000,111133
+Almond,COUVERTURE CHOCOLATE,DF11,DF11,1,5,spice beam,5,1/30/2019,0.50,G,0,Inclusive,0.50,1000,111134
+Lactose Free,COUVERTURE CHOCOLATE,DF12,DF12,1,5,spice beam,5,1/31/2019,0.50,G,0,Inclusive,0.50,1000,111135
+Decaf,COUVERTURE CHOCOLATE,DF48,DF48,1,5,spice beam,5,2/1/2019,0.50,G,0,Inclusive,0.50,1000,111136
+Coconut,COUVERTURE CHOCOLATE,DF13,DF13,1,5,spice beam,5,2/2/2019,0.50,G,0,Inclusive,0.50,1000,111137
+Oat Milk,COUVERTURE CHOCOLATE,DF14,DF14,1,5,spice beam,5,2/3/2019,0.50,G,0,Inclusive,0.50,1000,111138
+English Breakfast REG,TEAS,DF38,DF38,1,5,spice beam,5,2/4/2019,3.50,G,0,Inclusive,3.50,1000,111139
+English Breakfast LARGE,TEAS,DF39,DF39,1,5,spice beam,5,2/5/2019,4.00,G,0,Inclusive,4.00,1000,111140
+English Breakfast TEAPOT,TEAS,DF15,DF15,1,5,spice beam,5,2/6/2019,4.50,G,0,Inclusive,4.50,1000,111141
+Earl Grey REG,TEAS,DF16,DF16,1,5,spice beam,5,2/7/2019,3.50,G,0,Inclusive,3.50,1000,111142
+Earl Grey LARGE,TEAS,DF17,DF17,1,5,spice beam,5,2/8/2019,4.00,G,0,Inclusive,4.00,1000,111143
+Earl Grey TEAPOT,TEAS,DF18,DF18,1,5,spice beam,5,2/9/2019,4.50,G,0,Inclusive,4.50,1000,111144
+Green Tea REG,TEAS,DF19,DF19,1,5,spice beam,5,2/10/2019,3.50,G,0,Inclusive,3.50,1000,111145
+Green Tea LARGE,TEAS,DF20,DF20,1,5,spice beam,5,2/11/2019,4.00,G,0,Inclusive,4.00,1000,111146
+Green Tea TEAPOT,COLD DRINKS,DF21,DF21,1,5,spice beam,5,2/12/2019,4.50,G,0,Inclusive,4.50,1000,111147
+Peppermint Tea REG,COLD DRINKS,DF22,DF22,1,5,spice beam,5,2/13/2019,3.50,G,0,Inclusive,3.50,1000,111148
+Peppermint Tea LARGE,COLD DRINKS,DF23,DF23,1,5,spice beam,5,2/14/2019,4.00,G,0,Inclusive,4.00,1000,111149
+Peppermint Tea TEAPOT,COLD DRINKS,DF24,DF24,1,5,spice beam,5,2/15/2019,4.50,G,0,Inclusive,4.50,1000,111150
+Chamomile REG,COLD DRINKS,DF40,DF40,1,5,spice beam,5,2/16/2019,3.50,G,0,Inclusive,3.50,1000,111151
+Chamomile LARGE,COLD DRINKS,DF41,DF41,1,5,spice beam,5,2/17/2019,4.00,G,0,Inclusive,4.00,1000,111152
+Chamomile TEAPOT,COLD DRINKS,DF27,DF27,1,5,spice beam,5,2/18/2019,4.50,G,0,Inclusive,4.50,1000,111153
+Coke Diet Coke Lemonade ,COLD DRINKS,DF29,DF29,1,5,spice beam,5,2/19/2019,3.00,G,0,Inclusive,3.00,1000,111154
+Peach Mango Iced Tea,COLD DRINKS,DF30,DF30,1,5,spice beam,5,2/20/2019,6.50,G,0,Inclusive,6.50,1000,111155
+"Peach iced tea, diced mango, ",COLD DRINKS,DF42,DF42,1,5,spice beam,5,2/21/2019,0.00,G,0,Inclusive,0.00,1000,111156
+mint leaves,COLD DRINKS,DF31,DF31,1,5,spice beam,5,2/22/2019,0.00,G,0,Inclusive,0.00,1000,111157
+Berry Iced Tea,COLD DRINKS,DF32,DF32,1,5,spice beam,5,2/23/2019,6.50,G,0,Inclusive,6.50,1000,111158
+"Lemon iced tea, mixed berries, mint leaves",COLD DRINKS,DF43,DF43,1,5,spice beam,5,2/24/2019,0.00,G,0,Inclusive,0.00,1000,111159
+Mock Mojito,COLD DRINKS,DF50,DF50,1,5,spice beam,5,2/25/2019,0.00,G,0,Inclusive,0.00,1000,111160
+"Raw sugar, fresh mint leaves, ",COLD DRINKS,DF51,DF51,1,5,spice beam,5,2/26/2019,160.00,G,0,Inclusive,160.00,1000,111161
+"fresh lime, soda on crushed ice",COLD DRINKS,DF52,DF52,1,5,spice beam,5,2/27/2019,170.00,G,0,Inclusive,170.00,1000,111162
+Mango Lime ,GRANITAS,DF81,DF81,1,5,spice beam,5,2/28/2019,7.00,G,0,Inclusive,7.00,1000,111163
+Passionfruit,GRANITAS,DF82,DF82,1,5,spice beam,5,3/1/2019,7.00,G,0,Inclusive,7.00,1000,111164
+Iced Coffee with Ice Cream & Whipped Cream,ICED COFFEES,DF84,DF84,1,5,spice beam,5,3/2/2019,6,G,0,Inclusive,6,1000,111165
+Mocha Over Ice,ICED COFFEES,DF85,DF85,1,5,spice beam,5,3/3/2019,5.5,G,0,Inclusive,5.5,1000,111166
+Latte Over Ice,ICED COFFEES,DF87,DF87,1,5,spice beam,5,3/4/2019,5.5,G,0,Inclusive,5.5,1000,111167
+Long Black Over Ice,ICED COFFEES,DF88,DF88,1,5,spice beam,5,3/5/2019,4.5,G,0,Inclusive,4.5,1000,111168
+Chocolate Frappe,FRAPPES ,DF90,DF90,1,5,spice beam,5,3/6/2019,7.00,G,0,Inclusive,7.00,1000,111154
+Pure melted chocolate blended with ice cream and,FRAPPES ,DF91,DF91,1,5,spice beam,5,3/7/2019,0.00,G,0,Inclusive,0.00,1000,111155
+"ice, topped with whipped cream",FRAPPES ,ME21,ME21,1,5,spice beam,5,3/8/2019,0.00,G,0,Inclusive,0.00,1000,111156
+Mocha Frappe,FRAPPES ,ME22,ME22,1,5,spice beam,5,3/9/2019,7.00,G,0,Inclusive,7.00,1000,111157
+Espresso and pure melted chocolate blended with,FRAPPES ,ME23,ME23,1,5,spice beam,5,3/10/2019,0.00,G,0,Inclusive,0.00,1000,111158
+"ice cream and ice, topped with whipped cream",FRAPPES ,ME31,ME31,1,5,spice beam,5,3/11/2019,0.00,G,0,Inclusive,0.00,1000,111159
+Chocolate,CLASSIC MILKSHAKES,ME32,ME32,1,5,spice beam,5,3/12/2019,6.50,G,0,Inclusive,6.50,1000,111160
+Strawberry,CLASSIC MILKSHAKES,ME35,ME35,1,5,spice beam,5,3/13/2019,6.50,G,0,Inclusive,6.50,1000,111161
+Caramel,CLASSIC MILKSHAKES,ME33,ME33,1,5,spice beam,5,3/14/2019,6.50,G,0,Inclusive,6.50,1000,111162
+Vanilla,CLASSIC MILKSHAKES,ME36,ME36,1,5,spice beam,5,3/15/2019,6.50,G,0,Inclusive,6.50,1000,111163
+Mango,CLASSIC MILKSHAKES,ME34,ME34,1,5,spice beam,5,3/16/2019,6.50,G,0,Inclusive,6.50,1000,111164
+Salty Caramel Shake,CLASSIC MILKSHAKES,ME41,ME41,1,5,spice beam,5,3/17/2019,8.50,G,0,Inclusive,8.50,1000,111165
+Triple Choc Shake,CLASSIC MILKSHAKES,ME42,ME42,1,5,spice beam,5,3/18/2019,8.50,G,0,Inclusive,8.50,1000,111166
+Sunrise Juice,JUICES,ME43,ME43,1,5,spice beam,5,3/19/2019,6.00,G,0,Inclusive,6.00,1000,111167
+Replenish,JUICES,ME44,ME44,1,5,spice beam,5,3/20/2019,6.00,G,0,Inclusive,6.00,1000,111168
+Juice your way,JUICES,ME45,ME45,1,5,spice beam,5,3/21/2019,6,G,0,Inclusive,6,1000,111169
+"Berry, Mango, Banana, Passionfruit ",SMOOTHIES,ME46,ME46,1,5,spice beam,5,3/22/2019,6.50,G,0,Inclusive,6.50,1000,111170
+Mango,SMOOTHIES,ME51,ME51,1,5,spice beam,5,3/23/2019,6.50,G,0,Inclusive,6.50,1000,111171
+Banana,SMOOTHIES,ME52,ME52,1,5,spice beam,5,3/24/2019,6.50,G,0,Inclusive,6.50,1000,111172
+Passionfruit,SMOOTHIES,ME53,ME53,1,5,spice beam,5,3/25/2019,6.50,G,0,Inclusive,6.50,1000,111173
+Churros & Ice cream,DESSERTS,ME55,ME55,1,5,spice beam,5,3/26/2019,12.00,G,0,Inclusive,12.00,1000,111174
+"Churros tossed in cinnamon sugar,",DESSERTS,ME56,ME56,1,5,spice beam,5,3/27/2019,0.00,G,0,Inclusive,0.00,1000,111175
+w/ ice cream & chocolate pot  ,DESSERTS,ME54,ME54,1,5,spice beam,5,3/28/2019,0.00,G,0,Inclusive,0.00,1000,111176
+Churro Sundae,DESSERTS,ME61,ME61,1,5,spice beam,5,3/29/2019,13.50,G,0,Inclusive,13.50,1000,111177
+"Vanilla ice cream, churros, brownie",DESSERTS,ME62,ME62,1,5,spice beam,5,3/30/2019,0.00,G,0,Inclusive,0.00,1000,111178
+"crumble, dulce de leche, chocolate",DESSERTS,ME63,ME63,1,5,spice beam,5,3/31/2019,0.00,G,0,Inclusive,0.00,1000,111179
+fudge & cinnamon sugar  ,DESSERTS,ME65,ME65,1,5,spice beam,5,4/1/2019,0.00,G,0,Inclusive,0.00,1000,111180
+Belgian Waffles,DESSERTS,ME66,ME66,1,5,spice beam,5,4/2/2019,12.50,G,0,Inclusive,12.50,1000,111181
+Avocado with Spicy Poached Eggs,BEVERAGES,ME64,ME64,1,5,spice beam,5,4/3/2019,10.00,G,0,Inclusive,10.00,1000,111182
+"Smashed fresh avo, soft poached egg, feta cheese,",BEVERAGES,AR111,AR111,1,5,spice beam,5,4/4/2019,0.00,G,0,Inclusive,0.00,1000,111183
+"cherry tomatoes, mixed seeds",BEVERAGES,AR112,AR112,1,5,spice beam,5,4/5/2019,0.00,G,0,Inclusive,0.00,1000,111184
+Akuri on Toast,BEVERAGES,AR113,AR113,1,5,spice beam,5,4/6/2019,10,G,0,Inclusive,10,1000,111185
+Indian parsi style soft scrambled eggs cooked,BEVERAGES,AR121,AR121,1,5,spice beam,5,4/7/2019,0.00,G,0,Inclusive,0.00,1000,111186
+ in spices & served with toasted bread,BEVERAGES,AR241,AR241,1,5,spice beam,5,4/8/2019,0.00,G,0,Inclusive,0.00,1000,111187
+Egg Paratha,BEVERAGES,AR301,AR301,1,5,spice beam,5,4/9/2019,6.00,G,0,Inclusive,6.00,1000,111188
+Egg Paratha or anda paratha is a delicious ,BEVERAGES,AR114,AR114,1,5,spice beam,5,4/10/2019,0.00,G,0,Inclusive,0.00,1000,111189
+layered flat bread with egg stuffing. ,BEVERAGES,AR115,AR115,1,5,spice beam,5,4/11/2019,0.00,G,0,Inclusive,0.00,1000,111190
+Bacon & Egg Burger,BEVERAGES,AR116,AR116,1,5,spice beam,5,4/12/2019,10.00,G,0,Inclusive,10.00,1000,111191
+Brekkie Wrap,BEVERAGES,AR118,AR118,1,5,spice beam,5,4/13/2019,10,G,0,Inclusive,10,1000,111192
+"Free range fried egg, bacon, spinach, bbq ",BEVERAGES,AR150,AR150,1,5,spice beam,5,4/14/2019,0.00,G,0,Inclusive,0.00,1000,111193
+"sauce, aioli",BEVERAGES,AR119,AR119,1,5,spice beam,5,4/15/2019,0.00,G,0,Inclusive,0.00,1000,111194
+Eggs your way,BEVERAGES,AR311,AR311,1,5,spice beam,5,4/16/2019,10,G,0,Inclusive,10,1000,111195
+"Poached, Scrambled, Fried",BEVERAGES,AR131,AR131,1,5,spice beam,5,4/17/2019,0.00,G,0,Inclusive,0.00,1000,111196
+Spicy Eggs Benny,BEVERAGES,AR132,AR132,1,5,spice beam,5,4/18/2019,15,G,0,Inclusive,15,1000,111197
+Veggie Burger,BURGERS,AR133,AR133,1,5,spice beam,5,4/19/2019,16,G,0,Inclusive,16,1000,111198
+"Crumbed vegan garden patty, American cheese, ",BURGERS,AR242,AR242,1,5,spice beam,5,4/20/2019,0,G,0,Inclusive,0,1000,111199
+"tomato, onion, pickles, baby cos lettuce, burger ",BURGERS,AR243,AR243,1,5,spice beam,5,4/21/2019,0,G,0,Inclusive,0,1000,111200
+"mayo, on a brioche bun w/ fries",BURGERS,AR138,AR138,1,5,spice beam,5,4/22/2019,0,G,0,Inclusive,0,1000,111201
+Spicy Chicken Burger,BURGERS,AR135,AR135,1,5,spice beam,5,4/23/2019,16,G,0,Inclusive,16,1000,111202
+Flaming Beef Burger,BURGERS,AR303,AR303,1,5,spice beam,5,4/24/2019,16,G,0,Inclusive,16,1000,111203
+Bun Samosa,BURGERS,AR315,AR315,1,5,spice beam,5,,6,G,0,Inclusive,6,1000,111204
+Veggie Frankie ,FRANKIES,AR151,AR151,1,5,spice beam,5,,10,G,0,Inclusive,10,1000,111205
+Chicken Frankie,FRANKIES,AR244,AR244,1,5,spice beam,5,,10,G,0,Inclusive,10,1000,111206
+Mutton Frankie,,AR304,AR304,1,5,spice beam,5,,10,G,0,Inclusive,10,1000,111207
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
